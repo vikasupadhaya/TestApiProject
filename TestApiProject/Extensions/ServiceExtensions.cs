@@ -37,8 +37,7 @@ namespace AccountOwnerServer.Extensions
 
         public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
         {
-            var connectionString = config["ConnectionStrings:BloggingDatabase"];
-            services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(config.GetConnectionString("BloggingDatabase")));
+            services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(config.GetConnectionString("DataBaseConnection")));
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)

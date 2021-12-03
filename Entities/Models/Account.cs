@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
 {
+    /// <summary>
+    /// This is a an entity model for the Account Table.
+    /// </summary>
     [Table("Account")]
     public class Account
     {
